@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Wilpattu National Park</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./wilpattucss.css">
+    <link rel="icon" href="./IMAGES/mainlogo3.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navlinks">
+            <a href="./index.html"><img class="logo" src="./IMAGES/mainlogo3.jpg" alt="website logo"></a>
+            <ul class="navigation-list">
+                <li class="links"><a href="./wildlifeintroduction.html">Places to visit</a></li>
+                <li class="links"><a href="./depwildlifecon.html">Conservation</a></li>
+                <li class="links"><a href="./leopard.html">Leopards</a></li>
+                <li class="links"><a href="./animalsinsrilanka.html">Wildlife</a></li>
+                <li class="links">
+                    <button class="btn" id="login-button">Login</button>
+                    <button class="btn" id="logout-button">Logout</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="closebox" id="close-popup">&times;</span>
+                <form id="loginForm" action="/login" method="post">
+                    <p class="login-prompt">Enter Login Details</p>
+                    <label for="username" class="login-prompt">Username : </label>
+                    <input type="text" name="username" placeholder="Username" id="username" required><br><br>
+                    <label for="password" class="login-prompt">Password : </label>
+                    <input type="password" name="password" placeholder="Password" id="password" required><br><br>
+                    <button type="button" id="loginSubmit">Login</button>
+                </form>
+                <p id="error-message"></p>
+            </div>
+        </div>
+        <div class="topic">
+            <h1 class="editableHeading" id="wilpattupark-main-topic"></h1>
+        </div>
+        <img src="./IMAGES2/penicon.png" class="btn2" id="editicon">
+        <img src="./IMAGES2/checkmark.png" class="btn2" id="savelogo">
+        <section class="flex">
+            <div class="flexBox">
+                <h2 class="editableHeading2" id="wilpattupark-section1-title"></h2>
+                <p class="editablePara" id="wilpattupark-section1-content"></p>
+            </div>
+            <div class="flexBox">
+                <h2 class="editableHeading2" id="wilpattupark-section2-title"></h2>
+                <p class="editablePara" id="wilpattupark-section2-content"></p>
+            </div>
+            <div class="flexBox">
+                <h2 class="editableHeading2" id="wilpattupark-section3-title"></h2>
+                <p class="editablePara" id="wilpattupark-section3-content"></p> 
+            </div>
+        </section>
+        
+        <section>
+            <div class="flexgallery">
+                <div class="fleximg">
+                    <img src="./IMAGES2/slidewil6.jpg" alt="Deers">
+                </div>
+                <div class="fleximg">
+                    <img src="./IMAGES2/slidewil2.jpg" alt="Elephant in grassland.">
+                </div>
+                <div class="fleximg">
+                    <img src="./IMAGES2/slidewil3.jpg" alt="Wetland in Wilpattu">
+                </div>
+                <div class="fleximg">
+                    <img src="./IMAGES2/slidewil4.jpg" alt="Sunset near lakeside.">
+                </div>
+                <div class="fleximg">
+                    <img src="./IMAGES2/slidewil5.jpg" alt="A group of peacocks.">
+                </div>
+                <div class="fleximg">
+                    <img src="./IMAGES2/slidewil1.jpg" alt="A lone peacock">
+                </div>
+                <div class="fleximg">
+                    <img src="./IMAGES2/slidewil7.jpg" alt="Baby monkey resting on parent monkey.">
+                </div>
+                <div class="fleximg">
+                    <img src="./IMAGES2/slidewil8.jpg" alt="Group of cheetahs.">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <h1 id="newslettermsg">Subscribe to our newsletter here !</h1>
+        <!-- view subscription button -->
+        <button id="subsbtn" class="btn3">View Subscriptions</button>
+        <div class="table-popup" id="tablepopup">
+            <button id="closebtnsub" class="closeboxsub">&times;</button>
+            <table id="subscriptionTable">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Subscription data will be displayed here -->
+            </tbody>
+        </table>
+    </div></div>
+    <!-- subscribe button -->
+        <button id="subscribebutton">Subscribe</button>
+        <div id="nsPopup" class="formbox">
+          <button id="closebox">Close</button>
+          <p id="msg2">Enter your details</p>
+          <form id="subscribeForm">
+            <label class="fullname">Full Name:</label><br><br>
+            <input type="text" class="fullname" name="fullname" required><br><br>
+            <label for="email_" class="mailcss">Email:</label><br><br>
+            <input type="email" class="mailcss" id="email_" name="email" required><br><br><br>
+            <button id="submitstyle" type="submit">Submit</button>
+          </form>
+        </div><br><br>
+        <!--References
+        Anon, (n.d.). Wilpattu National Park Sri Lanka | Official Website. [online] Available at: https://www.dwc.gov.lk/wnp/.
+
+        www.wilpattunationalpark.com. (n.d.). Wilpattu | Wilpattu Safari Tours | Safaris in Wilpattu. [online] Available at: https://www.wilpattunationalpark.com/ [Accessed 27 Dec. 2023].
+‌
+‌-->
+        
+    </footer>
+    <script src="main.js" defer></script>
+
+</body>
+</html>

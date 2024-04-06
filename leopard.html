@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./homepage.css">
+        <link rel="icon" href="./IMAGES/mainlogo3.jpg" type="image/x-icon">
+        <title>Leopards in Sri Lanka </title>
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navlinks">
+                <a href="./index.html"><img class="logo" src="./IMAGES/mainlogo3.jpg" alt="website logo"></a>
+                <ul class="navigation-list">
+                    <li class="links"><a href="./wildlifeintroduction.html">Places to visit</a></li>
+                    <li class="links"><a href="./depwildlifecon.html">Conservation</a></li>
+                    <li class="links"><a href="./leopard.html">Leopards</a></li>
+                    <li class="links"><a href="./animalsinsrilanka.html">Wildlife</a></li>
+                    <li class="links">
+                        <button class="btn" id="login-button">Login</button>
+                        <button class="btn" id="logout-button">Logout</button>
+                    </li>
+                </ul>
+            </nav>
+            <img id="leopard" src="./IMAGES/leopard2.jpg" alt="leopard"> 
+        </header>
+        <main>
+            <div id="loginPopup" class="popup">
+                <div class="popup-content">
+                    <span class="closebox" id="close-popup">&times;</span>
+                    <form id="loginForm" action="/login" method="post">
+                        <p class="login-prompt">Enter Login Details</p>
+                        <label for="username" class="login-prompt">Username : </label>
+                        <input type="text" name="username" placeholder="Username" id="username" required><br><br>
+                        <label for="password" class="login-prompt">Password : </label>
+                        <input type="password" name="password" placeholder="Password" id="password" required><br><br>
+                        <button type="button" id="loginSubmit">Login</button>
+                    </form>
+                    <p id="error-message"></p>
+                </div>
+            </div>
+            <section>
+                <img src="./IMAGES2/penicon.png" class="btn2" id="editicon">
+                <img src="./IMAGES2/checkmark.png" class="btn2" id="savelogo">
+                <div class="topic">
+                    <p class="firsttopic" id="leopard-main-topic"></p>
+                </div>   
+                <h2 class="editableHeading2" id="leopard-section1-title"></h2> <!--•	Descriptions of at least three venues where Leopard is found in Sri Lanka.-->
+                <p class=" editablePara" id="leopard-section1-content"></p>
+                <h3 class="editableHeading3" id="leopard-section2-title"></h3>
+                <div class="flex">
+                    <div class="flexContent">
+                        <p class="editablePara" id="leopard-section2-content"></p>
+                    </div>
+                    <div class="flexImg">
+                        <img class="leopimg" src="./IMAGES2/yalaleopard.jpg" alt="a leopard on a tree in Yala.">
+                    </div>
+                </div>
+                <h3 class="editableHeading3" id="leopard-section3-title"></h3>
+                <div class="flex">
+                    <div class="flexContent">
+                        <p class="editablePara" id="leopard-section3-content"></p>
+                    </div>
+                    <div class="flexImg">
+                        <img class="leopimg" src="./IMAGES/kumanaleopard.jpg" alt="a leopard in Kumana.">
+                    </div>
+                </div>
+                <h3 class="editableHeading3" id="leopard-section4-title"></h3>
+                <div class="flex">
+                    <div class="flexContent">
+                        <p class="editablePara" id="leopard-section4-content"></p>
+                    </div>
+                    <div class="flexImg">
+                        <img class="leopimg" src="./IMAGES2/wilpattuleopard.jpg" alt="a leopard in Wilpattu.">
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h2 class="editableHeading2" id="leopard-section5-title"></h2>
+                
+                <h3 class="editableHeading3" id="leopard-section6-title"></h3> <!--First threat to leopards.-->
+                <div class="flex">
+                    <div class="flexImg">
+                        <img class="threatimage" src="./IMAGES/habitatloss3.jpg" alt="A leopard passing by a jeep.">
+                    </div>
+                    <div class="flexContent">
+                        <p class="editablePara" id="leopard-section6-content"></p>
+                    </div>
+                </div>
+            </section>
+            <section>
+                <h3 class="editableHeading3" id="leopard-section7-title"></h3> <!--Second threat to leopards.-->
+                <div class="flex">
+                    <div class="flexImg">
+                        <img class="threatimage" src="./IMAGES2/poaching.jpg" alt="A leopard found dead.">
+                    </div>
+                    <div class="flexContent">
+                        <p class="editablePara" id="leopard-section7-content"></p>
+                    </div>
+                </div>
+             </section>
+        </main>
+        <footer>
+            <h1 id="newslettermsg">Subscribe to our newsletter here !</h1>
+            <!-- view subscription button -->
+            <button id="subsbtn" class="btn3">View Subscriptions</button>
+        <div class="table-popup" id="tablepopup"><table id="subscriptionTable">
+            <button id="closebtnsub" class="closeboxsub">&times;</button>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Subscription data will be displayed here -->
+            </tbody>
+        </table>
+    </div></div>
+    <!-- subscribe button -->
+            <button id="subscribebutton">Subscribe</button>
+            <div id="nsPopup" class="formbox">
+              <button id="closebox">Close</button>
+              <p id="msg2">Enter your details</p>
+              <form id="subscribeForm">
+                <label class="fullname">Full Name:</label><br><br>
+                <input type="text" class="fullname" name="fullname" required><br><br>
+                <label for="email_" class="mailcss">Email:</label><br><br>
+                <input type="email" class="mailcss" id="email_" name="email" required><br><br><br>
+                <button id="submitstyle" type="submit">Submit</button>
+              </form>
+            </div><br><br>
+            <div id="nextpage">
+                <a href="./animalsinsrilanka.html">Page 5</a>
+                </div>
+                <!--References
+                    Fernando, N. (2022). Leopards in Sri Lanka. [online] Ceylon Hunt. Available at: https://ceylonhunt.com/leopards-in-sri-lanka/ [Accessed 18 Dec. 2023].
+    
+    LANKA EXCURSIONS HOLIDAYS. (n.d.). Leopards in Sri Lanka. [online] Available at: https://www.lanka-excursions-holidays.com/leopards.html [Accessed 18 Dec. 2023].
+    
+    LEOPOCON - SRI LANKA. (n.d.). Home. [online] Available at: https://www.leopocon.org/ [Accessed 20 Dec. 2023].
+    
+    ‌
+     Rodrigo.M (n.d.). 109 leopards slain in 12 years, risks rising for 1,000 left. [online] Available at: https://www.sundaytimes.lk/220731/news/109-leopards-slain-in-12-years-risks-rising-for-1000-left-490532.html [Accessed 10 May 2023].
+    
+    ‌Wnpssl.org. (2022). Available at: https://www.wnpssl.org/news/lolcleopard.html [Accessed 20 Dec. 2023].
+    
+    ‌
+    
+                www.srilankainstyle.com. (n.d.). Spotting the Sri Lankan Leopard. [online] Available at: https://www.srilankainstyle.com/blog/spotting-the-sri-lankan-leopard [Accessed 18 Dec. 2023].
+    
+    ‌-->
+        </footer>
+        <script src="main.js" defer></script>
+    </body>
+
+</html>

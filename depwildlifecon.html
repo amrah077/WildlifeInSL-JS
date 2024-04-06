@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./homepage.css">
+        <link rel="icon" href="./IMAGES/mainlogo3.jpg" type="image/x-icon">
+        <title>The Department of Wildlife Conservation  </title>
+        
+    </head>
+    <body>
+        <header>
+          <nav class="navlinks">
+              <a href="./index.html"><img class="logo" src="./IMAGES/mainlogo3.jpg" alt="website logo"></a>
+              <ul class="navigation-list">
+                  <li class="links"><a href="./wildlifeintroduction.html">Places to visit</a></li>
+                  <li class="links"><a href="./depwildlifecon.html">Conservation</a></li>
+                  <li class="links"><a href="./leopard.html">Leopards</a></li>
+                  <li class="links"><a href="./animalsinsrilanka.html">Wildlife</a></li>
+                  <li class="links">
+                      <button class="btn" id="login-button">Login</button>
+                      <button class="btn" id="logout-button">Logout</button>
+                  </li>
+              </ul>
+          </nav>
+          <img id="department" src="./IMAGES/deptlogo.jpg" alt="Logo of the conservation department.">
+      </header>
+      <main>
+          <div id="loginPopup" class="popup">
+              <div class="popup-content">
+                  <span class="closebox" id="close-popup">&times;</span>
+                  <form id="loginForm" action="/login" method="post">
+                      <p class="login-prompt">Enter Login Details</p>
+                      <label for="username" class="login-prompt">Username : </label>
+                      <input type="text" name="username" placeholder="Username" id="username" required><br><br>
+                      <label for="password" class="login-prompt">Password : </label>
+                      <input type="password" name="password" placeholder="Password" id="password" required><br><br>
+                      <button type="button" id="loginSubmit">Login</button>
+                  </form>
+                  <p id="error-message"></p>
+              </div>
+          </div>
+            <div class="topic">
+              <p class="firsttopic" id="depwildlifecon-main-topic"></p>
+            </div>
+            <img src="./IMAGES2/penicon.png" class="btn2" id="editicon">
+            <img src="./IMAGES2/checkmark.png" class="btn2" id="savelogo">
+            <section id="depwildlifecon-section1">
+              <h2 class="editableHeading2" id="depwildlifecon-section1-title"></h2>
+              <p class="editablePara" id="depwildlifecon-section1-content"></p>
+            </section>
+            <section id="depwildlifecon-section2">
+                <h2 class="editableHeading2" id="depwildlifecon-section2-title"></h2> <!--•	A gallery using a flexbox to showcase protected areas -->
+                <div class="gallery">
+                    <div class="image">
+                      <img src="./IMAGES2/prot1.jpg" alt="Kitulgala Forest Reserve">
+                      <p class="caption">Kitulgala Forest Reserve</p>
+                    </div>
+                    <div class="image">
+                        <img src="./IMAGES2/prot2.jpg" alt="Hauts plateaux">
+                        <p class="caption">Hauts plateaux</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot3.jpg" alt="Kumana Wetland Cluster">
+                        <p class="caption">Kumana Wetland Cluster</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot4.jpg" alt="Wilpattu Ramsar Wetland">
+                        <p class="caption">Wilpattu Ramsar Wetland</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot5.jpg" alt="Maduganga">
+                        <p class="caption">Maduganga</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot6.jpg" alt="Hurulu Forest Reserve">
+                        <p class="caption">Hurulu Forest Reserve</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot7.jpg" alt="Chundikulam National Park">
+                        <p class="caption">Chundikulam National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot8.jpg" alt="Angammedilla National Park">
+                        <p class="caption">Angammedilla National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot9.jpg" alt="Gallway's Land National Park">
+                        <p class="caption">Gallway's Land National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot10.jpg" alt="Kaudulla National Park">
+                        <p class="caption">Kaudulla National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot11.jpg" alt="Somawathiya National Park">
+                        <p class="caption">Somawathiya National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot12.jpg" alt="Flood Plains National Park">
+                        <p class="caption">Flood Plains National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot13.jpg" alt="Hikkaduwa Coral Sanctuary">
+                        <p class="caption">Hikkaduwa Coral Sanctuary</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot14.jpg" alt="Pigeon Island National Park">
+                        <p class="caption">Pigeon Island National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot15.jpg" alt="Lunugamvehera National Park">
+                        <p class="caption">Lunugamvehera National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot16.jpg" alt="Sinharaja Forest Reserve">
+                        <p class="caption">Sinharaja Forest Reserve</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot17.jpg" alt="Minneriya National Park">
+                        <p class="caption">Minneriya National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot18.jpg" alt="Bundala National Park">
+                        <p class="caption">Bundala National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot19.jpg" alt="Yala National Park">
+                        <p class="caption">Yala National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot20.jpg" alt="Adam's Bridge National Park">
+                        <p class="caption">Adam's Bridge National Park</p>
+                      </div>
+                      <div class="image">
+                        <img src="./IMAGES2/prot21.jpg" alt="Hakgala Strict Nature Reserve">
+                        <p class="caption">Hakgala Strict Nature Reserve</p>
+                      </div>
+                      
+
+                </div>
+            </section>
+            <section id="depwildlifecon-section3">
+                <h2 class="editableHeading2" id="depwildlifecon-section3-title"></h2> <!--Location map of the department.-->
+                <iframe id="map2" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15843.782988928731!2d79.9198057!3d6.8970927!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae250aa85489b1f%3A0xd8773339b6b43dbb!2sDepartment%20of%20Wildlife%20Conservation!5e0!3m2!1sen!2slk!4v1702856027002!5m2!1sen!2slk"></iframe>
+            </section>
+
+        </main>
+        <footer> <!--Consists of department contact details. With clickable icons that redirect user to the relevant contact information.-->
+          <h1 id="newslettermsg">Subscribe to our newsletter here !</h1>
+          <!-- view subscription button -->
+          <button id="subsbtn" class="btn3">View Subscriptions</button>
+          <div class="table-popup" id="tablepopup"><table id="subscriptionTable">
+            <button id="closebtnsub" class="closeboxsub">&times;</button>
+              <thead>
+                  <tr>
+                      <th>Full Name</th>
+                      <th>Email</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <!-- Subscription data will be displayed here -->
+              </tbody>
+          </table>
+      </div></div>
+      <!-- subscribe button -->
+          <button id="subscribebutton">Subscribe</button>
+          <div id="nsPopup" class="formbox">
+            <button id="closebox">Close</button>
+            <p id="msg2">Enter your details</p>
+            <form id="subscribeForm">
+              <label class="fullname">Full Name:</label><br><br>
+              <input type="text" class="fullname" name="fullname" required><br><br>
+              <label for="email_" class="mailcss">Email:</label><br><br>
+              <input type="email" class="mailcss" id="email_" name="email" required><br><br><br>
+              <button id="submitstyle" type="submit">Submit</button>
+            </form>
+          </div><br><br>
+          <div id="nextpage">
+              <a href="./leopard.html">Page 4</a>
+              </div>
+              <!--References
+              Anon, (n.d.). Department of Wildlife Conservation – We Protect Future! [online] Available at: https://www.dwc.gov.lk/.
+  
+              lk.chm-cbd.net. (n.d.). Protected areas | Sri Lanka Biodiversity. [online] Available at: https://lk.chm-cbd.net/protected-areas?page=0 [Accessed 17 Dec. 2023].
+  
+  ‌
+  ‌-->
+      </footer>
+      <script src="main.js" defer></script>
+    </body>
+
+
+</html>

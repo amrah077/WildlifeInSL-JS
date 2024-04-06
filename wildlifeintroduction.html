@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./homepage.css">
+        <link rel="icon" href="./IMAGES/mainlogo3.jpg" type="image/x-icon">
+        <title>The Sri Lankan wildlife introduction </title>
+        
+    </head>
+    <body>
+        <header>
+            <nav class="navlinks">
+                <a href="./index.html"><img class="logo" src="./IMAGES/mainlogo3.jpg" alt="website logo"></a>
+                <ul class="navigation-list">
+                    <li class="links"><a href="./wildlifeintroduction.html">Places to visit</a></li>
+                    <li class="links"><a href="./depwildlifecon.html">Conservation</a></li>
+                    <li class="links"><a href="./leopard.html">Leopards</a></li>
+                    <li class="links"><a href="./animalsinsrilanka.html">Wildlife</a></li>
+                    <li class="links">
+                        <button class="btn" id="login-button">Login</button>
+                        <button class="btn" id="logout-button">Logout</button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div id="loginPopup" class="popup">
+                <div class="popup-content">
+                    <span class="closebox" id="close-popup">&times;</span>
+                    <form id="loginForm" action="/login" method="post">
+                        <p class="login-prompt">Enter Login Details</p>
+                        <label for="username" class="login-prompt">Username : </label>
+                        <input type="text" name="username" placeholder="Username" id="username" required><br><br>
+                        <label for="password" class="login-prompt">Password : </label>
+                        <input type="password" name="password" placeholder="Password" id="password" required><br><br>
+                        <button type="button" id="loginSubmit">Login</button>
+                    </form>
+                    <p id="error-message"></p>
+                </div>
+            </div>
+            <div class="topic">
+                <p class="firsttopic" id="wildlifeintroduction-main-topic"></p>
+            </div>
+            <img src="./IMAGES2/penicon.png" class="btn2" id="editicon">
+            <img src="./IMAGES2/checkmark.png" class="btn2" id="savelogo">
+            <section id="wildlifeintroduction-section1">
+                <h2 class="editableHeading2" id="wildlifeintroduction-section1-title"></h2>
+                <div class="flex"> <!--Created flex to keep the place description and map side by side.-->
+                    <div class="flexContent">
+                        <p class="boxaround2 editablePara" id="wildlifeintroduction-section1-content"></p>
+                    </div>
+                    <div class="fleximg">
+                        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15859.596626391387!2d80.4600266!3d6.4069908!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3e76bd109d45f%3A0x8c0ef1010649701b!2sSinharaja%20Forest%20Reserve!5e0!3m2!1sen!2slk!4v1702653900313!5m2!1sen!2slk"></iframe></div>
+                    </div><br>
+                <div class="slideshowcont"> <!--A slideshow of pictures of the wildlife location described.-->
+                    <img src="./IMAGES2/Sinharaja-Forest-Reserve-World-Heritage-Rainforest.jpg" alt="Sinharaja forest scenery">
+                    <img src="./IMAGES2/sinharaja4.jpg" alt="Sinharaja forest scenery">
+                    <img src="./IMAGES2/sinharaja6.jpeg" alt="Sinharaja forest butterflies">
+                    <img src="./IMAGES2/sinharaja7.jpg" alt="Sinharaja forest bird">
+                    <img src="./IMAGES2/sinharaja5.jpg" alt="Sinharaja forest lodge logo">
+                    <img src="./IMAGES2/sinharaja-forest-hotel.jpg" alt="Sinharaja forest hotel">
+                    <img src="./IMAGES2/sinharaja-2.jpg" alt="Sinharaja forest feline">
+                    <img src="./IMAGES2/sinharaja-waterfall.jpg" alt="Sinharaja forest waterfall">
+                    <img src="./IMAGES2/sinhadeer.jpg" alt="Sinharaja forest deers">
+                    <img src="./IMAGES2/sinhasnake.jpg" alt="Sinharaja forest snake">
+                </div>
+            </section>
+            <section id="wildlifeintroduction-section2">
+                <h2 class="editableHeading2" id="wildlifeintroduction-section2-title"></h2>
+                <div class="flex">
+                    <div class="flexContent">
+                        <p class="boxaround2 editablePara" id="wildlifeintroduction-section2-content"></p>
+                    </div>
+                    <div class="flexImg">
+                        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.3707413616003!2d80.458728!3d5.9435367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae13fd4c636d5ff%3A0xb81456b9b41a93b2!2sMirissa%20Beach!5e0!3m2!1sen!2slk!4v1702715945649!5m2!1sen!2slk"></iframe></div>
+                    </div><br>
+                <div class="slideshowcont">
+                    <img src="./IMAGES/Mirissa1.jpg" alt="Mirissa ocean">
+                    <img src="./IMAGES/mirissa3.jpg" alt="Mirissa coastal landscape">
+                    <img src="./IMAGES/mirissa6.jpg" alt="Mirissa sunset">
+                    <img src="./IMAGES/mirissa7.jpg" alt="Mirissa wallart">
+                    <img src="./IMAGES/mirissa4.jpg" alt="Mirissa street art">
+                    <img src="./IMAGES/mirissa5.jpg" alt="Mirissa scuba diving">
+                    <img src="./IMAGES/mirissa8.jpg" alt="Mirissa whale watching">
+                    <img src="./IMAGES/mirissafood.jpg" alt="Mirissa hotel breakfast">
+                    <img src="./IMAGES/mirissa9.jpeg" alt="Mirissa night view">
+                   </div>
+            </section>
+            <section id="wildlifeintroduction-section3">
+                <h2 class="editableHeading2" id="wildlifeintroduction-section3-title"></h2>
+                <div class="flex">
+                    <div class="flexContent">
+                        <p class="boxaround2 editablePara" id="wildlifeintroduction-section3-content"></p>
+                    </div>
+                    <div class="flexImg">
+                        <iframe class=”maps” src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15813.377845229286!2d80.9207737!3d7.7532419!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3afb52570f648bc9%3A0xa4d95d7cf2f31436!2sWasgamuwa%20National%20Park!5e0!3m2!1sen!2slk!4v1702718316535!5m2!1sen!2slk"></iframe> 
+                    </div>
+
+                </div><br>
+                <div class="slideshowcont">
+                    <img src="./IMAGES2/wasg3.jpg" alt="Wasgamuwa elephants">
+                    <img src="./IMAGES2/wasg4.jpg" alt="National park landscape">
+                    <img src="./IMAGES2/wasg5.jpg" alt="Wasgamuwa peacock">
+                    <img src="./IMAGES2/wasg6.jpg" alt="Wasgamuwa wildboar">
+                    <img src="./IMAGES2/wasg7.jpg" alt="Wasgamuwa grassland">
+                    <img src="./IMAGES2/wasg10.avif" alt="Wasgamuwa hotel pool view">
+                    <img src="./IMAGES2/wasg12.jpg" alt="Wasgamuwa hotel breakfast">
+                    <img src="./IMAGES2/wasg9.jpg" alt="Wasgamuwa ducks">
+                    
+                </div>
+            </section>
+            <section id="wildlifeintroduction-section4">
+                <h2 class="editableHeading2" id="wildlifeintroduction-section4-title"></h2>
+                <div class="flex">
+                    <div class="flexContent"> 
+                        <p class="boxaround2 editablePara" id="wildlifeintroduction-section4-content"></p>
+                    </div>
+                    <div class="flexImg">
+                        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15846.696154043711!2d80.8023333!3d6.809446!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae3882edb4b78ef%3A0xcebca89153777249!2sHorton%20Plains%20National%20Park!5e0!3m2!1sen!2slk!4v1702722871024!5m2!1sen!2slk" ></iframe>
+                    </div>
+                </div><br>
+                <div class="slideshowcont">
+                    <img src="./IMAGES/horton1.jpg" alt="Horton Plains scenic view">
+                    <img src="./IMAGES/horton11.jpg" alt="Horton Plains deer">
+                    <img src="./IMAGES/horton2.jpg" alt="Horton Plains 2 leopards">
+                    <img src="./IMAGES/horton3.jpg" alt="Horton Plains wild pig">
+                    <img src="./IMAGES/horton4.jpg" alt="Horton Plains World's End viewpoint">
+                    <img src="./IMAGES/horton5.jpg" alt="Horton Plains lake">
+                    <img src="./IMAGES/horton7.jpg" alt="Horton Plains waterfall">
+                    <img src="./IMAGES/horton8.jpg" alt="Horton Plains white monkeys">
+                    <img src="./IMAGES/horton9.jpg" alt="Horton Plains lodge">
+                    <img src="./IMAGES/horton10.jpg" alt="Horton Plains hiking">
+                    <img src="./IMAGES/horton12.jpg" alt="Horton Plains hotel food">
+                </div>
+            </section>
+            <section id="wildlifeintroduction-section5">
+                <h2 class="editableHeading2" id="wildlifeintroduction-section5-title"></h2>
+                <div class="flex">
+                    <div class="flexContent">
+                        <p class="boxaround2 editablePara" id="wildlifeintroduction-section5-content"></p>
+                    </div>
+                    <div class="flexImg">
+                        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15870.661363286945!2d80.198366!3d6.0405752!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae176a77a395a21%3A0x18a1078243359955!2sSea%20Turtle%20Hatchery%20Centre%2C%20Mahamodara!5e0!3m2!1sen!2slk!4v1702730891115!5m2!1sen!2slk"></iframe>
+                    </div>
+                </div><br>
+                <div class="slideshowcont">
+                    <img src="./IMAGES/galle2.jpg" alt="Turtles in a tank">
+                    <img src="./IMAGES/galle1.jpg" alt="Galle seashore">
+                    <img src="./IMAGES/galle11.jpg" alt="Group of turtles swimming">
+                    <img src="./IMAGES/galle12.jpg" alt="Group of turtles on seashore">
+                    <img src="./IMAGES/galle3.jpg" alt="Entrance to turtle hatchery">
+                    <img src="./IMAGES/galle4.jpg" alt="A baby turtle">
+                    <img src="./IMAGES/galle6.jpg" alt="Turtle hatchery">
+                    <img src="./IMAGES/galle7.jpg" alt="Turtle hatchery">
+                    <img src="./IMAGES/galle8.jpg" alt="Tourist swimming with turtles">
+                    <img src="./IMAGES/galle9.jpg" alt="Sea ">
+                </div>
+            </section>
+            <section id="wildlifeintroduction-section6">
+                <h2 class="editableHeading2" id="wildlifeintroduction-section6-title"></h2>
+                <div class="flex">
+                    <div class="flexContent">
+                        <p class="boxaround2 editablePara" id="wildlifeintroduction-section6-content"></p>
+                     </div>
+                    <div class="flexImg">
+                        <iframe class="maps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15829.884230649806!2d80.388855!3d7.3008545!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae315c83a2c0273%3A0xa5744b525ada1e6c!2sPinnawala%20Elephant%20Orphanage!5e0!3m2!1sen!2slk!4v1702827127468!5m2!1sen!2slk"></iframe>
+                    </div>
+                </div><br>
+                <div class="slideshowcont">
+                    <img src="./IMAGES/pinnawala1.jpg" alt="Elephants bathing in river.">
+                    <img src="./IMAGES2/pinnawala2.jpg" alt="Pinnawala elephants playing.">
+                    <img src="./IMAGES2/pinnawala3.jpg" alt="Tourists watching elephants.">
+                    <img src="./IMAGES2/pinnawala4.jpg" alt="Elephants bathing in river.">
+                    <img src="./IMAGES2/pinnawala5.jpg" alt="Baby elephants with mother.">
+                    <img src="./IMAGES2/pinnawala6.jpg" alt="Tourist riding on elephant.">
+                    <img src="./IMAGES2/pinnawala7.jpg" alt="Visitors feeding elephant.">
+                    <img src="./IMAGES2/pinnawala8.jpg" alt="Group of elephants">
+                    <img src="./IMAGES2/pinnawala9.jpg" alt="Souvenir store">
+                    <img src="./IMAGES2/pinnawala10.jpg" alt="Pinnawala elephant exhibit">
+                </div>
+            </section><br><br>
+            <section>
+                <table id="bordered-table"> <!--Creating a table with three columns and more than 3 rows.-->
+                    <thead>
+                    <tr>
+                        <th>Location</th>
+                        <th>Reknowned Animal Sightings</th>
+                        <th>Did you know?</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr id="wildlifeintroduction-row1">
+                        <td id="row1-location">Sinharaja Forest Reserve</td>
+                        <td>
+                            <ul class="tablelist" id="row1-sighting"> 
+                                <li>Sri Lanka Blue Magpie</li>
+                                <li>Sri Lanka Yellow-fronted Barbet</li>
+                                <li>Sri Lanka Red Faced Malkoha</li>
+                                <li>Sri Lanka Wood Pigeon</li>
+                        </ul></td>
+                        <td id="row1-fact">Sinharaja world heritage site is rich in bird life with an impressive 147 species recorded to date. It is also the only location where 21 out of 26 bird species endemic to Sri Lanka may be viewed.
+                        </td>
+                    </tr>
+                    <tr id="wildlifeintroduction-row2">
+                        <td id="row2-location">Mirissa Coastline</td>
+                        <td><ul class="tablelist" id="row2-sighting"> 
+                            <li>Blue whale</li>
+                            <li> Sperm whale</li>
+                            <li>Dolphin</li>
+                           
+                    </ul></td>
+                        <td id="row2-fact">Mirissa attracts tourists not only for its coastal wildlife but for other fun activities including surfing, snorkeling and its vibrant nightlife.</td>
+
+                    </tr>
+                    <tr id="wildlifeintroduction-row3">
+                        <td id="row3-location">Wasgamuwa National Park</td>
+                        <td><ul class="tablelist" id="row3-sighting"> 
+                            <li>Sloth Bear</li>
+                            <li> Elephant</li>
+                            <li> Peacock </li>
+                           
+                    </ul></td>
+                        <td id="row3-fact">Sloth bears are not commonly spotted in many wildlife regions in Sri Lanka. Wasgamuwa is one of the very few places where you are likely to spot this fascinating creature.
+                   
+                            </td>
+                    </tr>
+                    <tr id="wildlifeintroduction-row4">
+                        <td id="row4-location">Horton Plains National Park</td>
+                        <td><ul class="tablelist" id="row4-sighting"> 
+                            <li>Sambar deer</li>
+                            <li>Monkey</li>
+                            <li>Leopard</li>
+                            <li>Wildboar</li>
+                    </ul></td>
+                        <td id="row4-fact">Horton Plains is reknowned for its breathtaking scenery, amazing waterfalls, the World’s End reservoir view and its three-hour long hiking trail.
+                            </td>
+                    </tr>
+                    <tr id="wildlifeintroduction-row5">
+                        <td id="row5-location">Sea Turtle Hatchery Centre</td>
+                        <td><ul class="tablelist" id="row5-sighting"> 
+                            <li>Turtles</li>
+                           
+                    </ul></td>
+                        <td id="row5-fact">Turtle nesting season in Sri Lanka takes place between November and May, while hatching season falls between January and June (peak February - April). You may like to bear this in mind when selecting your visit dates.
+                            </td>
+                    </tr>
+                    <tr id="wildlifeintroduction-row6">
+                        <td id="row6-location">Pinnawala Elephant Orphanage</td>
+                        <td><ul class="tablelist" id="row6-sighting"> 
+                            <li>Elephants</li>
+                           
+                    </ul></td>
+                        <td id="row6-fact">As of 2023,Pinnawala has the largest herd of captive elephants in the world.</td>
+                    </tr>
+                    </tbody>
+                    <tfoot> <!--Table footer-->
+                        <tr>
+                            <td colspan="3">All information contained here is true as of January 2024.</td>
+                          </tr>
+                    </tfoot>
+                </table>
+
+            </section>
+
+        </main>
+        <footer>
+            <h1 id="newslettermsg">Subscribe to our newsletter here !</h1>
+            <!-- view subscription button -->
+            <button id="subsbtn" class="btn3">View Subscriptions</button>
+        <div class="table-popup" id="tablepopup"><table id="subscriptionTable">
+            <button id="closebtnsub" class="closeboxsub">&times;</button>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Subscription data will be displayed here -->
+            </tbody>
+        </table>
+    </div></div>
+    <!-- subscribe button -->
+            <button id="subscribebutton">Subscribe</button>
+            <div id="nsPopup" class="formbox">
+              <button id="closebox">Close</button>
+              <p id="msg2">Enter your details</p>
+              <form id="subscribeForm">
+                <label class="fullname">Full Name:</label><br><br>
+                <input type="text" class="fullname" name="fullname" required><br><br>
+                <label for="email_" class="mailcss">Email:</label><br><br>
+                <input type="email" class="mailcss" id="email_" name="email" required><br><br><br>
+                <button id="submitstyle" type="submit">Submit</button>
+              </form>
+            </div><br><br>
+            <div id="nextpage">
+                <a href="./depwildlifecon.html">Page 3</a>
+                </div> 
+                
+                <!--References
+                Anon, (2020). Wasgamuwa National Park 2023 - SIGIRIYA Sri Lanka - Official Travel Guide. [online] Available at: https://sigiriyafortress.com/wasgamuwa-national-park/ [Accessed 16 Dec. 2023].
+    
+                beachandblissmirissa.com. (n.d.). Mahamodara Sea Turtle Hatchery || Things To Do || Beach & Bliss. [online] Available at: http://beachandblissmirissa.com/view-activity.php?id=15 [Accessed 17 Dec. 2023].
+    
+                Campaign, T.C. (2019). TOP 7 THINGS TO DO IN MIRISSA, Sri Lanka. [online] The Coastal Campaign. Available at: https://www.thecoastalcampaign.com/mirissa-sri-lanka/ [Accessed 16 Dec. 2023]
+    
+                Lakpura LLC. (n.d.). Pinnawala Elephant Orphanage. [online] Available at: https://lk.lakpura.com/pages/pinnawala-elephant-orphanage [Accessed 17 Dec. 2023].
+    
+                Sinharaja Forest Reserve. (2018). Flora & Fauna. [online] Available at: https://sinharajareserve.weebly.com/flora-fauna.html
+    
+                Tourslanka. (n.d.). Sinharaja Rain Forest in Sri Lanka | Sinharaja Forest Reserve. [online] Available at: https://www.tourslanka.com/things-to-do/sinharaja-rain-forest-sri-lanka/ [Accessed 13 Dec. 2023]
+    
+                Tripadvisor. (n.d.). THE 10 BEST Sri Lanka Nature & Wildlife Areas (Updated 2023). [online] Available at: https://www.tripadvisor.com/Attractions-g293961-Activities-c57-t68-Sri_Lanka.html [Accessed 13 Dec. 2023].
+    
+                Tripadvisor. (n.d.). Wasgamuwa National Park - All You Need to Know BEFORE You Go (with Photos). [online] Available at: https://www.tripadvisor.com/Attraction_Review-g304140-d1022182-Reviews-Wasgamuwa_National_Park-Polonnaruwa_North_Central_Province.html [Accessed 16 Dec. 2023].
+    
+                Truly Sri Lanka. (n.d.). Mahamodara Sea Turtle Hatchery | Galle. [online] Available at: https://www.trulysrilanka.com/attractions/mahamodara-sea-turtle-hatchery.html [Accessed 17 Dec. 2023].
+    
+                www.ecoteam.lk. (n.d.). Wasgamuwa National Park. [online] Available at: https://www.ecoteam.lk/travel-destinations-sri-lanka/nature-an-national-parks-sri-lanka/wasgamuwa.html.
+    
+                www.stockholm.embassy.gov.lk. (n.d.). Horton Plains : Embassy of Sri Lanka in Stockholm, Sweden. [online] Available at: https://www.stockholm.embassy.gov.lk/en/sri_lanka/horton-plains/#:~:text=At%20an%20altitude%20of%202%2C100 [Accessed 16 Dec. 2023].
+    
+    ‌
+    -->
+    
+        </footer>
+        <script src="main.js" defer></script>
+    </body>
+
+</html>
