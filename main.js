@@ -159,47 +159,50 @@ function subsTable (){
     subsTablePopup.style.display = "flex";
 }
 
-function LoadContent() {
-    const storedData = JSON.parse(localStorage.getItem('websiteData'));
-    const currentPage = getCurrentPage();
+function LoadContent() {  //This function is responsible for loading the content onto the webpage from the local storage based on the current page. 
+    const storedData = JSON.parse(localStorage.getItem('websiteData'));  //JSON to JS objects. Retrieving dats from the local storage.
+    const currentPage = getCurrentPage();  //im getting the  name of the current pagw from the URL.
 
-    // Define page keys
-    const pageKeys = Object.keys(storedData);
+    //Creating an array called pageKeys 
+    const pageKeys = Object.keys(storedData);  //so storedData is the JS object of data from local storage(parsed). object.keys is a built-in method. its taking the JS object and making an array. using the keys of the object as the items in the array.(each key represents each webpage in my json).
 
-    // Define the current page based on the page keys
+    // .findIndex iterates over all the elements in the  array. if the key name matches the name of the 'currentPage', it returns the index of that element in the array. 
+    //(key => key === currentPage) is an arrow function used as a callback for findIndex(). This function checks if the current element (key) is equal to the currentPage. It returns true if they are equal, and false otherwise.
+    //so the index number is stored in thre below const variable.
     const currentPageIndex = pageKeys.findIndex(key => key === currentPage);
 
-    // Define the corresponding key from stored data
+    // Defining the corresponding key from stored data. creating a variable to match the key(page name) with the index found in the array.
+    //Now store these keys in this below variable.
     const storedDataKey = Object.keys(storedData)[currentPageIndex];
 
-    if (storedData) {
-        if (storedDataKey === currentPage) {
-            const pageData = storedData[storedDataKey];
+    if (storedData) {  //checking if there is any data in the local storage.
+        if (storedDataKey === currentPage) {  //checks if the key retrieved from the local storage matches the name of the current page.
+            const pageData = storedData[storedDataKey];  //all the values(content)from the storedData is assigned to the relevant key .
 
             const main = pageData.maintopic;
-            document.getElementById(`${currentPage}-main-topic`).textContent = main.topic;
+            document.getElementById(`${currentPage}-main-topic`).textContent = main.topic; //the value of the main.topic(eg-leopards) is updated to the HTML element with the matching id given.
 
-            // Loop through sections
-            for (let i = 1; i <= Object.keys(pageData).length - 1; i++) {
-                const section = pageData[`section${i}`];
-                if (section) {
-                    // Check if title element exists
+            // Looping through sections as there's many paragraph/lists etc tags.
+            for (let i = 1; i <= Object.keys(pageData).length - 1; i++) {  
+                const section = pageData[`section${i}`];    //loops through each section(section1,section2 etc). It retrieves the data for the current section using pageData[section${i}].
+                if (section) {  //if that section exists....
+                    // Check if title element exists and if so, update the pageData title relevant to the specific HTML tag.
                     const sectionTitleElement = document.getElementById(`${currentPage}-section${i}-title`);
                     if (sectionTitleElement) {
                         sectionTitleElement.textContent = section.title;
                     }
-                    // Check if content element exists
+                    // Check if content element exists, update the pageData content relevant to the specific HTML tag.
                     const sectionContentElement = document.getElementById(`${currentPage}-section${i}-content`);
                     if (sectionContentElement) {
                         sectionContentElement.textContent = section.content;
                     }
                     const sectionList = document.getElementById(`${currentPage}-section${i}-list`);
-                    if (section.list && section.list.length > 0) {
-                        section.list.forEach(item => {
-                            if (item.trim() !== '') {
-                                const listItem = document.createElement('li');
-                                listItem.textContent = item;
-                                sectionList.appendChild(listItem);
+                    if (section.list && section.list.length > 0) { //checks if section.list exists and if the list has values(not empty).
+                        section.list.forEach(item => {  
+                            if (item.trim() !== '') {  //if list item is NOT empty value
+                                const listItem = document.createElement('li');  //creating new list tag.
+                                listItem.textContent = item; //write the value in the item(section.list value) to the new li tag. 
+                                sectionList.appendChild(listItem); //adds the new li with the value in the HTML ul with the relevant ID.
                             }
                         });
                     }
@@ -214,22 +217,21 @@ function LoadContent() {
 function getCurrentPage() {
     // Get the current URL name
     const url = window.location.href;
-    // Remove the .html extension from the url name
+    // Remove the .html extension from the url name.
     const pageName = url.substring(url.lastIndexOf('/') + 1).replace('.html', '');
     return pageName;
 }
 
 function makeEditable(elementId) {
-    const element = document.getElementById(elementId);
+    const element = document.getElementById(elementId); //Getting element from HTML.
     
-    // Check if the element exists
-    if (element) {
-        // Create a new editable element based on the type of the original element
+    if (element) {  //if element exists...
+        // Creating a new editable element based on the type of the original element
         let editableElement;
-        if (element.tagName.toLowerCase() === 'p' && element.classList.contains('firsttopic')) {
-            editableElement = document.createElement('input');
+        if (element.tagName.toLowerCase() === 'p' && element.classList.contains('firsttopic')) { //checks if the original element is a <p. tag and if it has a class called firsttopic.
+            editableElement = document.createElement('input'); //if that is the case,create an <input> tag for user to enter some value(editing the content)
             editableElement.type = 'text';
-            editableElement.value = element.textContent;
+            editableElement.value = element.textContent; //making sure that initially ,the values in the new editable element is set to the original values you made(eg-paragraph i originally typed in website should be already there in the new editable element.)
         } else if (element.tagName.toLowerCase() === 'h1') {
             editableElement = document.createElement('input');
             editableElement.type = 'text';
@@ -254,17 +256,18 @@ function makeEditable(elementId) {
             editableElement = document.createElement('textarea');
             editableElement.textContent = element.textContent;
         } else if (element.tagName.toLowerCase() === 'ul') {
-            // Convert each list item to a text input
-            editableElement = document.createElement('ul');
-            const listItems = element.querySelectorAll('li');
+            // Converting each list item to a text input
+            editableElement = document.createElement('ul'); //creating a new ul element
+            const listItems = element.querySelectorAll('li'); //selects all the <li> elements within the original <ul> element.
             if (listItems.length > 0) {
-                listItems.forEach(li => {
+                listItems.forEach(li => {  //iterates over each li
                     const listItem = document.createElement('li');
                     const input = document.createElement('input');
                     input.type = 'text';
-                    input.value = li.textContent;
-                    listItem.appendChild(input);
+                    input.value = li.textContent;  //It sets the initial value of the input element to the text content of the original list item .
+                    listItem.appendChild(input); //It appends the newly created text input as a child of this <li> element.
                     editableElement.appendChild(listItem);
+                    //Finally, the code appends the newly created <li> (with the text input) to the editable <ul> element. 
                 });
             } else {
                 console.log('No list items found.');
@@ -274,9 +277,9 @@ function makeEditable(elementId) {
             return;
         }
 
-        // Copy attributes from the original element to the editable element
-        Array.from(element.attributes).forEach(attr => {
-            editableElement.setAttribute(attr.name, attr.value);
+        // Copying the ATTRIBUTES(styling,etc) of the original html element to the editable one.
+        Array.from(element.attributes).forEach(attr => {  //converting the NamedNodeMap(where DOM element attributes are stored in a node)to an array so that we can use methods like the foreach loop. Loop iterates over each attribute in the array.
+            editableElement.setAttribute(attr.name, attr.value); //This is used to set the attribute of the editable element (editableElement) with the same name and value as the original attribute.
         });
 
         // Replace the original element with the editable one
@@ -285,10 +288,10 @@ function makeEditable(elementId) {
 }
 
 function editPageContent(){
-    const storedData = JSON.parse(localStorage.getItem('websiteData'));
-    const currentPage = getCurrentPage();
+    const storedData = JSON.parse(localStorage.getItem('websiteData'));  //retrieving data from local storage.
+    const currentPage = getCurrentPage(); //to edit the content of the currently viewed page only.
     editIconBtn.style.display = 'none';
-    saveIconBtn.style.display = 'block';
+    saveIconBtn.style.display = 'block';  //save changes button appears.
 
     const indexPage = Object.keys(storedData)[0];
     const wildlifeintroductionPage = Object.keys(storedData)[1];
@@ -377,13 +380,15 @@ function editPageContent(){
     }
 }
 
-function revertEdits(elementId) {
-    const element = document.getElementById(elementId);
+function revertEdits(elementId) { //to be able to revert the edited content back to original format if needed.
+    const element = document.getElementById(elementId);  //This line retrieves the HTML element with the specified elementId from the document.
     if (element) {
-        const parent = element.parentNode;
+        const parent = element.parentNode;  //getting the parent node of that element.
         let newElement;
 
-        // Revert the element based on its tag name and class
+        // Revert the element based on its tag name and class.
+
+        //This switch statement checks the tag name of the element and creates a new element based on that tag name and any associated classes.For example, if the original element is an <input> with the class 'editableHeading', it will create a new <h1> element.
         switch (element.tagName.toLowerCase()) {
             case 'input':
                 if (element.classList.contains('editableHeading')) {
@@ -411,19 +416,19 @@ function revertEdits(elementId) {
                 break;
         }
 
-        // Copy attributes from the editable element to the new element
+        // Copying attributes from the editable element to the new element. This ensures that any attributes present on the editable element are preserved on the new element.
         Array.from(element.attributes).forEach(attr => {
             newElement.setAttribute(attr.name, attr.value);
         });
 
-        // Replace the editable element with the new element
+        // Replacing the editable element with the new element
         parent.replaceChild(newElement, element);
     }
 }
 
 function savePageContent() {
-    const currentPage = getCurrentPage();
-    const storedData = JSON.parse(localStorage.getItem('websiteData'));
+    const currentPage = getCurrentPage();  //name of currently viewed page
+    const storedData = JSON.parse(localStorage.getItem('websiteData')); //data retrieved from local storage.
     editIconBtn.style.display = 'block';
     saveIconBtn.style.display = 'none';
 
@@ -434,6 +439,9 @@ function savePageContent() {
     const animalsInSriLankaPage=Object.keys(storedData)[4];
     const yalaParkPage=Object.keys(storedData)[5];
     const wilpattuParkPage=Object.keys(storedData)[6];
+
+    //Depending on the current page, it updates the stored data with the new content entered by the user.
+    //.value -->to assign newly added data(edited content) and update it into the variable.
 
     if (currentPage == indexPage){
         // Main topic
@@ -665,11 +673,11 @@ function savePageContent() {
         revertEdits('wilpattupark-section3-content');
     }
 
-    // Save the modified data back to local storage
+    // Save the modified data back to local storage after updating the particular value...
     localStorage.setItem('websiteData', JSON.stringify(storedData));
 
     // Load content dynamically
-    LoadContent();
+    LoadContent(); //bringing back this function to display the changeed content in html while webpage is viewed in the  browser.
 }
 
 // newsletter js
@@ -682,13 +690,13 @@ function subscriptions () {
     let fullName = fullNameInput.value.trim();
     let email = emailInput.value.trim();
 
-    // Validate email format
+    // Validate  theemail format
     if (!isEmailValid(email)) {
         alert("Please enter a valid email address.");
         return; // Exit function if email format is invalid
     }
 
-    // Store subscription data in localStorage
+    // Store the subscription data in localStorage
     let subscriptions = JSON.parse(localStorage.getItem('newsletterSubscriptions')) || [];
     subscriptions.push({ fullName: fullName, email: email });
     localStorage.setItem('newsletterSubscriptions', JSON.stringify(subscriptions));
@@ -708,7 +716,7 @@ function isEmailValid(email) {
 
 // all about the view subscription list table/dashboard
 
-// Function to update the subscription table with the data from localStorage
+// Function to update the subscription table with the data from the localStorage
 function updateSubscriptionTable() {
     let subscriptionsData = JSON.parse(localStorage.getItem('newsletterSubscriptions'));
     let subscriptionTableBody = document.querySelector('#subscriptionTable tbody');
